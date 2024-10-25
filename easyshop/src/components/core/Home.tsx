@@ -1,7 +1,8 @@
+import  Layout  from './Layout';
 import React from 'react';
 
 const Home = () => {
-    return <div>Welcome to EasyShop</div>;
+    return <Layout>Home</Layout>;
 }
 
 export default Home;
