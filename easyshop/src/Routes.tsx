@@ -1,21 +1,22 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes as RouterRoutes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './components/core/Home';
 import Shop from './components/core/Shop';
 
 const RoutesComponent = () => {
     return (
         <BrowserRouter>
-            <Routes>
+            <RouterRoutes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/shop" element={<Shop />} />
-            </Routes>
+            </RouterRoutes>
         </BrowserRouter>
     );
 };
 
 export default RoutesComponent;
+
 
 
 
