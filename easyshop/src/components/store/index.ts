@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers'; // 导入你的根 reducer
+import { applyMiddleware, configureStore } from '@reduxjs/toolkit';
+import createRootReducer from './reducers/index'; // 导入你的根 reducer
+import { routerMiddleware } from 'connected-react-router';
 
-const store = configureStore({
-  reducer: rootReducer,
-});
+export const history =createBrouseHistory()
+
+const store = configureStore(createRootReducer(history),applyMiddleware(routerMiddleware(history))
+);
 
 export default store;
